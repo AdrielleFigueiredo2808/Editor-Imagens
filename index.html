@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de Imagens</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <div class="container disable inverted">
+        <h2>Editor de Imagens</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title" for="filter-options">Filtros</label>
+                    <div class="options" id="filter-options">
+                        <button id="brightness" class="active" aria-pressed="true">
+                            <i class="fa-solid fa-sun" aria-hidden="true"></i> <span>Brilho</span>
+                        </button>
+                        <button id="saturation" aria-pressed="false">
+                            <i class="fa-solid fa-paintbrush" aria-hidden="true"></i> <span>Saturação</span>
+                        </button>
+                        <button id="inversion" aria-pressed="false">
+                            <i class="fa-solid fa-eye" aria-hidden="true"></i> <span>Inverter Cores</span>
+                        </button>
+                        <button id="grayscale" aria-pressed="false">
+                            <i class="fa-solid fa-paintbrush" aria-hidden="true"></i> <span>Escala de Cinza</span>
+                        </button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brilho</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200" aria-label="Controle de brilho" />
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title" for="rotate-options">Girar & Virar</label>
+                    <div class="options" id="rotate-options">
+                        <button id="left" aria-label="Girar a imagem para a esquerda">
+                            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> <span>Girar Esquerda</span>
+                        </button>
+                        <button id="right" aria-label="Girar a imagem para a direita">
+                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> <span>Girar Direita</span>
+                        </button>
+                        <button id="vertical" aria-label="Virar a imagem verticalmente">
+                            <i class="bx bx-reflect-vertical" aria-hidden="true"></i> <span>Virar Vertical</span>
+                        </button>
+                        <button id="horizontal" aria-label="Virar a imagem horizontalmente">
+                            <i class="bx bx-reflect-horizontal" aria-hidden="true"></i> <span>Virar Horizontal</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="assets/img/image-placeholder.svg" alt="Pré-visualização da imagem" />
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Resetar Filtros</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden />
+                <button class="choose-img" aria-label="Escolher imagem">Escolher Imagem</button>
+                <button class="save-img" aria-label="Salvar imagem">Salvar Imagem</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
